@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BichTech TSN ETH-Editor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./w3.css">
+<style>
+@media screen and (max-width: 455px) {
+    .h3 {
+        font-size:16px;
+    }
+};
+
+</style>
+<script src="../W3.CSS-Dateien/request.js" type="text/javascript"></script>
+<script src="../W3.CSS-Dateien/script.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="w3-sidebar w3-light-grey w3-card-4 w3-animate-left" style="width: 190px; display: block;" id="mySidebar">
+  <div class="w3-bar w3-dark-grey">
+  <span class="w3-bar-item w3-padding-16">dataHUB nano</span>
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">×</button>
+  </div>
+  <div class="w3-bar-block">
+  <a class="w3-bar-item w3-button" href="javascript:new ETHDeviceView('BTech X1', 1, null).add();">ETH X1</a>
+  <a class="w3-bar-item w3-button" href="javascript:new ETHDeviceView('BTech X2', 2, null).add();">ETH X2</a>
+  <a class="w3-bar-item w3-button" href="javascript:new ETHDeviceView('BTech X3', 3, null).add();">ETH X3</a>
+  <a class="w3-bar-item w3-button" href="javascript:new ETHDeviceView('BTech X4', 4, null).add();">ETH X4</a>
+  <a class="w3-bar-item w3-button" href="javascript:new ETHDeviceView('BTech X5', 5, null).add();">ETH X5</a>
+  <a class="w3-bar-item w3-button" href="javascript:save();">Export</a>
+  </div>
+</div>
+
+<div id="main" style="margin-left: 190px;">
+<span title="open Sidebar" style="display:none; color: white;" id="openNav" class="w3-button w3-transparent w3-display-topleft w3-xlarge" onclick="w3_open()">&#9776;</span>
+<div id="main_graphics" style = "height:100%; display: block">
+<svg id="svg" style="width:100%; height:100%;">         
+  
+  <g id="diagram" data-drag="diagram:diagram" data-drag-type="diagram">     
+    <g id="node-layer">      
+    </g>
+
+    <g id="connections-layer"></g>
+
+    <g class="connector">
+
+      <path class="connector-path-outline" />
+      <path class="connector-path" />
+
+      <circle class="connector-handle input-handle" cx="0" cy="0" r="4" />
+      <circle class="connector-handle inoutput-handle" cx="0" cy="0" r="4" />
+    </g>
+    
+    <circle id="drag-proxy" cx="0" cy="0" r="1" fill="none" />    
+  </g>
+</svg>
+</div>
+<div id="main_parameter" style = "height:100%; display: none;">
+paramter
+</div>
+<div id="main_result" style = "height:100%; display: none;">
+result
+</div>
+<div class="w3-bar w3-black">
+  <button id="graphics" class="w3-bar-item w3-button" style="background-color: #1a1a1a;" onclick="switch2Graphics();">Graphics</button>
+  <button id="params" class="w3-bar-item w3-button" onclick="switch2Parameter();">Parameter</button>
+  <button id="result" class="w3-bar-item w3-button" onclick="switch2Result();">Result</button>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
