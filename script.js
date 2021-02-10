@@ -54,7 +54,7 @@ class ETHDeviceView {
 	}
 	
 	addShape(element) {
-	  const shape = new NodeShape(element, 50, 50);
+	  const shape = new ETHDevice(element, 50, 50);
 	  shapeLookup[shape.id] = shape;
       shapes.push(shape);
 	}
@@ -438,7 +438,7 @@ class NodePort {
 //
 // NODE SHAPE
 // =========================================================================== 
-class NodeShape {
+class ETHDevice {
 
   constructor(element, x, y) {
 
@@ -492,7 +492,7 @@ class Diagram {
     this.dragElement = this.element = diagramElement;
 
     shapeElements.forEach((element, i) => {
-      const shape = new NodeShape(element, 50 + i * 250, 50);
+      const shape = new ETHDevice(element, 50 + i * 250, 50);
       shapeLookup[shape.id] = shape;
       shapes.push(shape);
     });
