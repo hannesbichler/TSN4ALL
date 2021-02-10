@@ -8,12 +8,12 @@ A TSN (time sensitive networking) configuration tool to manage different etherne
   How to add an menu device?
   Each device must provide the following infos to install it to menu bar:
   * name
-  *description
-  *version
-  *revision
-  *builddate
-  *image (png, jpg)
-  *portcount
-  *speed of each port
+  * description
+  * version
+  * revision
+  * builddate
+  * image (png, jpg)
+  * portcount
+  * speed of each port
   
   
